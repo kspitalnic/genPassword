@@ -11,36 +11,80 @@ var charAmountString = window.prompt ("How many characters would you like your p
     window.alert("Great! Your password will be " + charAmount + " characters long.");
     console.log("Var  charAmount = " + charAmount)   }
   else {
-    window.alert("Please try again selecting a whole number greater than or equal to 8 and less then or equal to 128.");
+    window.alert("Invalid input. Please try again selecting a whole number greater than or equal to 8 and less then or equal to 128.");
   }
 
-//variable for character amount. converted to float?
-
-  //if input is greater than 8 and less than 128, then confirm the variable 
+var pwdChars = [];
 
 
+var upperChar=window.confirm ("Would you like to include uppercase letters in your password?");
+
+var lowerChar=window.confirm ("Would you like to include lowercase letters in your password?");
+
+var numChar=window.confirm ("Would you like to include numerical characters in your password?");
+
+var specChar=window.confirm ("Would you like to include special characters in your password?");
+
+
+function determineChars(){
+
+  if (upperChar) {
+    upperSet= ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+    pwdChars=pwdChars+1;
+  }
+  else {
+    upperSet=[];
+    pwdChars=pwdChars;
+  }
 
   
-  
 
-//variable for characters. prompt and return numerical variable. convert string to float 
-//if input is number greater than 8 or less than 128, then confirm that as the variable. 
-//else if not enough char or too many, say invalid and call again. 
-//else cant understand the value please input an appropriate number (call again)
+  if(lowerChar) {
+    lowerSet= 'abcdefghijklmnopqrstuvwxyz'.split('');
+    pwdChars=pwdChars+1;
+  }
+  else{
+    lowerSet=[];
+    pwdChars=pwdChars;
+  }
 
-//initialize password chars as empty string actually array?
+  if (numChar) {
+    numSet='0123456789'.split('');
+    pwdChars=pwdChars+1;
+  }
+  else{
+    numSet=[];
+    pwdChars=pwdChars;
 
-//confirm upper. if yes. set up variables. if no. empty set. then pwdchar=pwdchar+one random character from the set (concatinate)
-//(so if yes pwd string will now have one upper char in it. if no, will remain an empty set). also append to master char 
+  }
 
-//confirm lower. if yes. set up variables. if no. empty set. then pwdchar=pwdchar+one random character from the set (concatinate)
-//(so if yes pwd string will now have any previous confirm char types. if no, will remain an empty set)
 
-//confirm numberic char. if yes. set up variables. if no. empty set. then pwdchar=pwdchar+one random character from the set (concatinate)
-//(so if yes pwd string will now have any previous confirm char types. if no, will remain an empty set)
+  if (specChar){
+    specSet=" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split('');
+    specSet.push('"');
+    pwdChars=pwdChars+1;
+  }
+  else {
+    specSet=[];
+    pwdChars=pwdChars;
 
-//confirm special char. if yes. set up variables. if no. empty set. then pwdchar=pwdchar+one random character from the set (concatinate)
-//(so if yes pwd string will now have any previous confirm char types. if no, will remain an empty set)
+  }
+
+  console.log(upperSet);
+  console.log(lowerSet);
+  console.log(numSet);
+  console.log(specSet);
+  console.log(pwdChars.length);
+
+var charRemain = charAmount-pwdChars.length;
+  console.log(charRemain);
+}
+
+determineChars();
+
+
+
+
 
 
 
@@ -55,13 +99,6 @@ var charAmountString = window.prompt ("How many characters would you like your p
 
 
 
-// var upperChar=window.confirm ("Would you like to include uppercase letters in your password?");
-
-// var lowerChar=window.confirm ("Would you like to include lowercase letters in your password?");
-
-// var numChar=window.confirm ("Would you like to include numerical characters in your password?");
-
-// var specialChar=window.confirm ("Would you like to include special characters in your password?");
 
 
 // Get references to the #generate element
