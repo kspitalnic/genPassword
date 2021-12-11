@@ -11,4 +11,5 @@ This web application generates a random password based on the criteria selected 
 Some strategies practiced include creating functions, for loops, and if-else statements.
 
 <a href="">Link to Website </a>
+<br/>
 <a href="https://github.com/kspitalnic/genPassword">Link to Repository </a>
