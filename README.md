@@ -13,3 +13,5 @@ Some strategies practiced include creating functions, for loops, and if-else sta
 <a href="https://kspitalnic.github.io/genPassword/">Link to Website </a>
 <br/>
 <a href="https://github.com/kspitalnic/genPassword">Link to Repository </a>
+
+Screenshot: <img src="pwdScreenshot.png"> 
