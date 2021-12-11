@@ -18,7 +18,8 @@ function generatePassword() {
     console.log("Var  charAmount = " + charAmount)
   }
   else {
-    window.alert("Invalid input. To generate a password, please refresh the browser and try again with an acceptable number.");
+    window.alert("Invalid input. To generate a password, please try again with an acceptable number.");
+    generatedPassword();
   }
   //return null
 
@@ -134,7 +135,7 @@ function generatePassword() {
   
     if (pwdCharCount.length >= 1) {
       var charRemain = charAmount - pwdCharCount.length;
-      console.log("Will generate" + charRemain + " more random characters before generating a password");
+      // console.log("Will generate" + charRemain + " more random characters before generating a password");
     }
     else {
       window.alert("You are required to accept at least one of the types of characters. A password will not generate. Please try again and confirm what types of characters you would like in your password.")
@@ -146,14 +147,9 @@ function generatePassword() {
     for (let i = 0; i < charRemain; i++) {
       pwdChars.push(charSet[Math.floor(Math.random() * charSet.length)]);
     }
-  
-    console.log(pwdChars);
-  
+    
     pwdChars = pwdChars.join("");
-  
-    console.log(pwdChars);
-  
-  
+    
     return pwdChars;
   }
 
